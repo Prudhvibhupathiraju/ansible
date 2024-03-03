@@ -1,8 +1,13 @@
--name: install ngninx
-  host: web
+- name: install and run ngninx
+  hosts: web
+  become: yes
   tasks:
-  -name: Install nginx
-  ansible.builtin.package:
-    name: nginx
-    state: present
+  - name: Installing nginx
+    ansible.builtin.package:
+     name: nginx
+     state: present
+  - name: Running nginx
+    ansible.builtin.service:
+     name: httpd
+     state: started 
     
