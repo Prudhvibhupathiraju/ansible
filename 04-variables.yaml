@@ -1,6 +1,10 @@
 - name: variables with play
   hosts: localhost
+  vars:
+    course: "DevOps"
+    trainer: "Siva Kumar"
+    duration: "110HRS"
   tasks:
     - name: checking variables
       ansible.builtin.debug:
-        msg: Hi, I am learning DevOps, Trainer is sivakumar, Duration is 110 HRs
+        msg: "Hi, I am learning {{course}}, Trainer is {{trainer}}, Duration is {{duration}}"
