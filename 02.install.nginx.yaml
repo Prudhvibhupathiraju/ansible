@@ -1,5 +1,5 @@
 -name: install ngninx
-  hosts: web
+  host: web
   tasks:
   -name: Install nginx
   ansible.builtin.package:
