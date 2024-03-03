@@ -1,8 +1,8 @@
 - name: install ngninx
   hosts: web
   tasks:
-  -name: installing nginx
-    ansible.builtin.package:
-     name: nginx
-     state: present
+  - name: Install ntpdate
+  ansible.builtin.package:
+    name: nginx
+    state: present
     
