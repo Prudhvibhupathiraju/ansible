@@ -8,6 +8,6 @@
      state: present
   - name: Running nginx
     ansible.builtin.service:
-     name: httpd
+     name: nginx
      state: started 
     
