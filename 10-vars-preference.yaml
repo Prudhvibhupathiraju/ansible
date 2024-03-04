@@ -1,7 +1,7 @@
 - name: variables with preference
   hosts: localhost
-  vars_files:
-  - variaables.yaml
+  # vars_files:
+  # - variaables.yaml
   vars_prompt:
   - name: person
     prompt: Please enter your name
