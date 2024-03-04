@@ -10,3 +10,7 @@
   - name: print value
     ansible.builtin.command:
       msg: "user output is {{user}}"  
+
+  - name: print exit status or return code
+    ansible.builtin.command:
+     msg: "status is {{user.rc}}"
