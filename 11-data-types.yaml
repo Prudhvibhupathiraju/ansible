@@ -1,0 +1,30 @@
+- name: checking data-types
+  hosts: localhost
+  vars:
+    Name: Bh Prudhvi Raju
+    Skills:
+    - AWS
+    - DevOps
+    - CCNA
+    - Linux
+    Experience:
+      AWS: 1
+      DevOps: 1
+      Linux: 1
+    Analyst: true 
+  tasks:
+  - name: Person Name
+    ansible.builtin.debug:
+      msg: "Name:{{Name}}"
+ 
+  - name: Person Skills
+    ansible.builtin.debug:
+      msg: "Skills:{{Skills}}"
+
+  - name: Person Experience
+    ansible.builtin.debug:
+      msg: "Experience:{{Experience}}"    
+
+  - name: Person Designation
+    ansible.builtin.debug:
+      msg: "Analyst:{{Analyst}}"      
