@@ -8,9 +8,9 @@
     ignore_errors: true
 
   - name: print value
-    ansible.builtin.command:
+    ansible.builtin.debug:
       msg: "user output is: {{user}}"  
 
   - name: print exit status or return code
-    ansible.builtin.command:
+    ansible.builtin.debug:
      msg: "status is: {{user.rc}}"
