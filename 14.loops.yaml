@@ -10,4 +10,4 @@
     - {name: 'git', state: 'present'}
     - {name: 'postfix', state: 'absent'}
     - {name: 'mysql', state: 'absent'}
-    - {name: 'nginx', state: 'present'}
+    - {name: 'nginx', state: 'absent'}
