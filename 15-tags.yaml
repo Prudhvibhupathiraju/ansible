@@ -1,0 +1,28 @@
+- name: ping playbook
+  hosts: web
+  tasks: 
+    - name: ping the server
+      ansible.builtin.debug:
+       msg: "debug"
+      tags:
+      - debug 
+
+    - name: Installing nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+      tags:
+      - nginx 
+      
+    - name: Running nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started 
+      tags:
+      - nginx 
+
+    - name: Play-2 and Task-2
+      ansible.builtin.debug:
+        msg: "Hello from Play-2 and Task-2"         
+      tags:
+      - debug   
